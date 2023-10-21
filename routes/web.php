@@ -28,6 +28,11 @@ Route::get('/inertia/index', [InertiaTestController::class, 'index'])->name('ine
 Route::get('/inertia/create', [InertiaTestController::class, 'create'])->name('inertia.create');
 Route::post('/inertia/store', [InertiaTestController::class, 'store'])->name('inertia.store');
 Route::get('/inertia/show/{id}', [InertiaTestController::class, 'show'])->name('inertia.show');
+Route::delete('/inertia/{id}', [InertiaTestController::class, 'delete'])->name('inertia.delete');
+
+Route::get('/component-test', function () {
+    return Inertia::render('ComponentTest');
+});
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
