@@ -4,4 +4,4 @@ const nl2br = (str) => {
     return res;
 };
 
-export { nl2br }
+export { nl2br };
